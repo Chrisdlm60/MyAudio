@@ -201,7 +201,7 @@ document.addEventListener('DOMContentLoaded', function() {
     createCalendar();
 
     const cardLinks = document.querySelectorAll('.card-link');
-    let selectedDoctor = "";
+    let selectedDoctor = "personnel disponible";
 
     cardLinks.forEach(cardLink => {
         cardLink.addEventListener('click', function(event) {

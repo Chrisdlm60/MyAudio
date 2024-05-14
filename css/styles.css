@@ -572,15 +572,14 @@ footer {
         margin-right: 20px;
     }
     
-}
-@media screen and (max-width: 768px) {
     header #logo {
         width: 10rem;
-        top: 40px;
-        left: 10px;
+        top: 15px;
+        left: 5px;
+        filter: drop-shadow(1px 1px 4px white);
     }
     header.body div {
-        margin-left: 20%;
+        margin-left: 18%;
     }
     div.column-container{
         display: contents;
@@ -594,53 +593,57 @@ footer {
     div.calendar {
         grid-row: 3;
     }
+    /* info docteur */
+    div.info_dr {
+        grid-row: 4;
+    }
     /* galerie image */
     div.galerie_media {
-        grid-row: 4;
+        grid-row: 5;
     }
     /* horaire + maps */
     div.info_centre {
-        grid-row: 5;
+        grid-row: 6;
     }
     /* services */
     div.services {
-        grid-row: 6;
+        grid-row: 7;
     }
     /* votre audio */
     div.v_audio {
-        grid-row: 7;
+        grid-row: 8;
     }
     /* votre centre audio */
     div.v_centre {
-        grid-row: 8;
+        grid-row: 9;
     }
     /* spécialité centre */
     div.speciality {
-        grid-row: 9;
+        grid-row: 10;
     }
     /* prestation */
     div.prestation {
-        grid-row: 10;
+        grid-row: 11;
     }
     /* diplome */
     div.congrat {
-        grid-row: 11;
+        grid-row: 12;
     }
     /* mode de paiement */
     div.mode {
-        grid-row: 12;
+        grid-row: 13;
     }
     /* FAQ */
     div.faq {
-        grid-row: 13;
+        grid-row: 14;
     }
     /* Avis et commentaires */
     div.avis_comment {
-        grid-row: 14;
+        grid-row: 15;
     }
     /* Actu */
     div.actu {
-        grid-row: 15;
+        grid-row: 16;
     }
     
 }
@@ -682,9 +685,9 @@ footer {
         margin-right: 1.25rem;
     }
     .container {
-        display: block;
         margin: 0;
         padding: 0;
+        gap: 0.8rem
     }
     div#r_sociaux {
         margin-left: -50px;
@@ -776,6 +779,12 @@ footer {
     .acces,
     .other_info {
         text-align: start;
+        padding-left: 10px;
+        gap: 0.5rem;
+    }
+    .hour {
+        font-size: 0.8rem;
+        padding-top: 3px;
     }
     div.info_centre div.open div.day {
         width: 25%;
