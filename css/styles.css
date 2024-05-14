@@ -224,6 +224,11 @@ body{
             display: contents;
             grid-row: auto;
         }
+        div.calendar #time > button {
+            border-radius: 10px;
+            margin: 5px 5px;
+            font-size: 1rem;
+        }
         
         div.calendar .appointment-button {
             width: 150px;
@@ -236,22 +241,11 @@ body{
             cursor: pointer;
         }
         
-        div.calendar .see-more-button {
-            width: 100px;
-            height: 30px;
-            margin: 10px;
-            text-align: center;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        
         div.calendar #submit-appointment {
             background-color: #007bff;
             color: #fff;
             border: none;
+            border-radius: 10px;
             padding: 0.5rem 1rem;
             margin-top: 1rem;
             cursor: pointer;
@@ -259,6 +253,11 @@ body{
         
         div.calendar #submit-appointment:hover {
             background-color: #0056b3;
+        }
+        div.calendar #prev-week,
+        div.calendar #next-week {
+            border-radius: 40%;
+            font-size: 1.1rem;
         }
         div.calendar #prev-week {
             margin-right: 10px;
@@ -563,6 +562,9 @@ footer {
 
 }
 @media screen and (max-width: 1024px) {
+    main {
+        padding: 5rem;
+    }
     .fs40 {
         font-size: 1.8rem;
     }
@@ -660,6 +662,7 @@ footer {
     }
     .box {
         max-width: 425px;
+        margin: 0.4rem 0;
     }
 
     #img_fond1,
@@ -727,6 +730,14 @@ footer {
     div.faq img {
         width: 3rem;
     }
+    .test_audit .test img#test {
+        width: 10rem;
+        height: 10rem;
+    }
+    .test_audit .test button {
+        width: 300px;
+        font-size: 1.5rem;
+    }
 }
 @media screen and (max-width: 320px) {
     html {
@@ -776,13 +787,5 @@ footer {
     div.faq img {
         top: 3px;
         right: 3px;
-    }
-    .test_audit .test img#test {
-        width: 10rem;
-        height: 10rem;
-    }
-    .test_audit .test button {
-        width: 300px;
-        font-size: 1.5rem;
     }
 }
