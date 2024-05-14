@@ -1,8 +1,10 @@
 let compteur = 0;
 
+let selectedDoctor = "";
+
 function toggleDisplay(elementId, buttonId) {
-    var element = document.getElementById(elementId);
-    var button = document.getElementById(buttonId);
+    let element = document.getElementById(elementId);
+    let button = document.getElementById(buttonId);
     
     if(elementId == 'contact') {
         if (element.style.display === "none") {
@@ -25,6 +27,12 @@ function toggleDisplay(elementId, buttonId) {
     }
 }
 
+function doctorInfo() {
+    const drName = this.getAttribute('data-name');
+
+    selectedDoctor = drName;
+}
+
 document.getElementById("show_num").addEventListener("click",function() {
     toggleDisplay('contact', 'show_num')
 } );
@@ -40,11 +48,13 @@ document.getElementById('faq_more').addEventListener('click', function(){
 })
 
 document.addEventListener("DOMContentLoaded", function() {
-    var cardLinks = document.querySelectorAll('.card-link');
-    var drInfo = document.getElementById('dr_info');
-    var drName = drInfo.querySelector('h3');
-    var drSpeciality = drInfo.querySelectorAll('p')[1]; 
-    var drImage = document.getElementById('img_profil');
+    let cardLinks = document.querySelectorAll('.card-link');
+    let drInfo = document.getElementById('dr_info');
+    let drName = drInfo.querySelector('h3');
+    let drSpeciality = drInfo.querySelectorAll('p')[1]; 
+    let drImage = document.getElementById('img_profil');
+
+    let showDiv = document.getElementById('info-dr');
 
     cardLinks.forEach(function(cardLink) {
         cardLink.addEventListener('click', function(event) {
@@ -70,6 +80,8 @@ document.addEventListener("DOMContentLoaded", function() {
             drName.textContent = this.getAttribute('data-name');
             drSpeciality.textContent = this.getAttribute('data-speciality');
             drImage.src = this.querySelector('img').src;
+
+            showDiv.style.display = "grid";
         });
     });
 });

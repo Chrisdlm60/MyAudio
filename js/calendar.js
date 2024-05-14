@@ -163,13 +163,11 @@ document.addEventListener('DOMContentLoaded', function() {
     
         getAvailableTimes(selectedDate) {
             console.log('Selected Date:', selectedDate);
-            // Définir les plages horaires d'ouverture du centre médical
             const openingHours = [
-                { startHour: 9, endHour: 13, endMinute: 30 }, // Matin
-                { startHour: 14, endHour: 18, startMinute: 30 } // Après-midi
+                { startHour: 9, endHour: 13, endMinute: 30 },
+                { startHour: 14, endHour: 18, startMinute: 30 } 
             ];
         
-            // Créer une liste de toutes les heures disponibles en fonction des plages horaires d'ouverture
             const availableTimes = [];
             openingHours.forEach(({ startHour, startMinute = 0, endHour, endMinute = 0 }) => {
                 for (let hour = startHour; hour < endHour; hour++) {
@@ -179,7 +177,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         
-            // Filtrer les heures disponibles en retirant celles qui sont déjà prises pour la date sélectionnée
             const selectedDateString = selectedDate.toISOString().split('T')[0];
             const appointmentsForDate = appointments[selectedDateString];
             if (appointmentsForDate) {
@@ -203,15 +200,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
     createCalendar();
 
+    const cardLinks = document.querySelectorAll('.card-link');
+    let selectedDoctor = "";
+
+    cardLinks.forEach(cardLink => {
+        cardLink.addEventListener('click', function(event) {
+            event.preventDefault();
+
+            const drName = this.getAttribute('data-name');
+            selectedDoctor = drName;
+
+            console.log('Nom du docteur sélectionné :', drName);
+
+        });
+    });
     const submitButton = document.getElementById('submit-appointment');
-    submitButton.addEventListener('click', function() {
-        const consultationType = document.getElementById('consultation-type').value;
-        const selectedDate = document.querySelector('.selected-day').getAttribute('data-date');
-        const selectedTime = document.querySelector('.selected-time').getAttribute('data-time');
+        submitButton.addEventListener('click', function() {
+            const consultationType = document.getElementById('consultation-type').value;
+            const selectedDate = document.querySelector('.selected-day').getAttribute('data-date');
+            const selectedTime = document.querySelector('.selected-time').getAttribute('data-time');
 
-        const confirmationMessage = `Vous avez pris rendez-vous pour une ${consultationType} le ${selectedDate} à ${selectedTime}.`;
+            const confirmationMessage = `Vous avez pris rendez-vous pour une ${consultationType} le ${selectedDate} à ${selectedTime} avec ${selectedDoctor}.`;
 
-        alert(confirmationMessage);
+            alert(confirmationMessage);
     });
     
 });

@@ -146,7 +146,7 @@ body{
     /**************/
     /****** information docteur *****/
         div.info_dr {
-            display: grid;
+            display: none;
             gap: 10px;
         }
         div.img_info {
@@ -170,6 +170,9 @@ body{
         }
     /***********/
     /****** calendrier *****/    
+        div.calendar {
+            text-align: center;
+        }
         div.calendar .date-selection {
             display: flex;
             align-items: center;
@@ -208,11 +211,13 @@ body{
         div.calendar .selected-day {
             background-color: #2FC39E;
         }
+        div.calendar .time-selection {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
         div.calendar #time {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            display: contents;
+            grid-row: auto;
         }
         
         div.calendar .appointment-button {
