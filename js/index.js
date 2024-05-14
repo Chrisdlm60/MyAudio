@@ -1,7 +1,5 @@
 let compteur = 0;
 
-let selectedDoctor = "";
-
 function toggleDisplay(elementId, buttonId) {
     let element = document.getElementById(elementId);
     let button = document.getElementById(buttonId);
@@ -25,12 +23,6 @@ function toggleDisplay(elementId, buttonId) {
             button.textContent = "Voir plus";
         }
     }
-}
-
-function doctorInfo() {
-    const drName = this.getAttribute('data-name');
-
-    selectedDoctor = drName;
 }
 
 document.getElementById("show_num").addEventListener("click",function() {
