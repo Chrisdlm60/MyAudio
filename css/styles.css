@@ -120,17 +120,17 @@ body{
             align-items: start;
             margin: 0 auto;
         }
-        div#r_sociaux div#social {
+        div#r_sociaux div.social {
             margin-right: 10px;
         }
-        div.centre div#logo {
+        div.centre div#logo_centre {
             background-color: white;
             width: 153px;
             height: 143px;
             justify-content: center;
             align-items: center;
         }
-        #logo img {
+        #logo_centre img {
             height: 36px;
         }
         div.logo_info img{
@@ -287,7 +287,7 @@ body{
         div.info_centre div.open div.day {
             width: 20%;
         }
-        div.info_centre div.acces div#access {
+        div.info_centre div.acces div.access {
             width: 4%;
             align-items: center;
             justify-content: center ;
@@ -368,7 +368,7 @@ body{
             margin-top: 10px;
             align-items: center;
         }
-        div.select_dr .cards #img_profil {
+        div.select_dr .cards .img_profil {
             height: 6em;
             padding-right: 10px;
         }
@@ -485,7 +485,7 @@ section.actu .card h3 {
 section.actu .calend {
     text-align: center;
 }
-section.actu #card {
+section.actu i.calend {
     color: #000000;
 }
 
@@ -741,6 +741,10 @@ footer {
         width: 300px;
         font-size: 1.5rem;
     }
+    div.faq img {
+        top: 3px;
+        right: 3px;
+    }
 }
 @media screen and (max-width: 320px) {
     html {
@@ -760,7 +764,7 @@ footer {
     div.centre .centre_info {
         display: contents;
     }
-    div.centre .logo_info #logo{
+    div.centre .logo_info #logo_centre{
         width: 100%;
     }
     div.centre_info_text {
@@ -789,12 +793,8 @@ footer {
     div.info_centre div.open div.day {
         width: 25%;
     }
-    #access {
+    .access {
         margin-right: 5px;
         padding-left: 0;
-    }
-    div.faq img {
-        top: 3px;
-        right: 3px;
     }
 }
