@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="css/var.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="https://kit.fontawesome.com/d282013d84.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <img id="img_fond2" src="img/Groupe 378.png" alt="">
+        
+        <header class="body flex">            
+            <img id="logo" src="img/Sans titre - 9.png" alt="logo my audio">
+            <div class="flex">
+                <a class="fs40 cwhite noborder" href="">
+                    <button class="fs40 savoir_plus">Vous êtes audioprothésiste</button>
+                    <span>En savoir plus</span>
+                </a>
+            </div>
+            <img id="img_fond1" src="img/Groupe 377.png" alt="">
+        </header>
+
+        <main>
+            <div class="container">
+                <div class="column-container">
+                    <div class="centre box pt20" id="1">
+                        <div class="centre_info f_row">
+                            <div class="logo_info f_column">
+                                <div class="flex" id="logo">
+                                    <img class="flex" id="note" src="img/glaudition_logo.png" alt="glaudition logo">
+                                </div>
+                                <img class="flex" src="img/Groupe 200.png" alt="notation">
+                                <div class="flex" id="avis">
+                                    <a href="#avis_comment" class="avis">Avis et commentaires</a>
+                                </div>
+                            </div>
+                            <div class="centre_info_text">
+                                <h3 class="fs40">G L'Audition</h3>
+                                <h4>Centre Audioprothésiste</h4>
+                                <div id="adresse">
+                                    <p>Adresse</p>
+                                    <p>128 Avenue des Minimes</p>
+                                    <p>31200 Toulouse</p>
+                                </div>
+                                <div id="contact">
+                                    <p>Contacts</p>
+                                    <p>05 61 47 69 08</p>
+                                </div>
+                                <button class="noborder cwhite" id="show_num">Afficher le numéro</button>
+                            </div>
+                            
+                            <div class="f_row" id="r_sociaux">
+                                <div id="social"><a href="https://www.facebook.com/profile.php?id=100069718733317&locale=fr_FR" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></div>
+                                <div id="social"><a href=""><i class="fa-brands fa-instagram"></i></a></div>
+                                <div id="social"><a href="https://www.linkedin.com/company/myaudio/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></div>
+                            </div>
+                        </div>
+    
+                    </div>
+    
+                    <div class="info_dr box bg-green-light">
+                        <div class="dr_info f_row bg-green-light">
+                            <div class="img_info f_column">
+                                <img id="img_profil" src="img/girl-919048_1920 (1).png" alt="Dr Dassa">
+                                <img id="notation" src="img/Groupe 200.png" alt="note">
+                            </div>
+                            <div id="dr_info">
+                                <h3 class="fs40">Dr Sarah Dassa</h3>
+    
+                                <p>Audioprothésiste </p>
+                                <p>Spécialiste en pédiatrie</p>
+    
+                                <div id="avis_dr">
+                                    <a href="#avis_comment" class="avis">Avis et commentaires</a>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="calendar box" id="">
+                        <h2 id="calendar-title">Choisissez votre motif de consultation :
+                            <div>
+                                <select id="consultation-type">
+                                    <option value=""></option>
+                                    <option value="1ere-consultation">1ere consultation</option>
+                                    <option value="suivi">Suivi</option>
+                                </select>
+                            </div>
+                            
+                        </h2>
+                    
+                        <h2>Choisissez une date :</h2>
+                        <div class="date-selection">
+                            <button id="prev-week">&lt;</button>
+                            <div class="dates-container" id="calendar">
+                                
+                            </div>
+                            <button id="next-week">&gt;</button>
+                        </div>
+                    
+                        <h2>Choisissez une heure :</h2>
+                        <div class="time-selection">
+                            <div id="time">
+                                
+                            </div>
+                        </div>
+                    
+                        <button id="submit-appointment">Je prends rdv</button>
+                    </div>
+                    
+                    <div class="info_centre box f_column">
+                        <div class="address mb20">
+                            <h4 class="mb20">Adresse</h4>
+                            <p>128 Avenue des Minimes</p>
+                            <p>31200 Toulouse</p>
+                        </div>
+                        
+                        
+                        <div class="maps mb20 .flex">
+                            <img id="maps" src="img/maps.png" alt="maps">
+                        </div>
+                        
+                        <div class="open">
+                            <h4 class="mb20">Horaires du centre auditif</h4>
+                        
+                            <div class="flex"><div class="day">Lundi :     </div><div class="hour">09h00 à 13h30 - 14h30 à 18h00</div></div>
+                            <div class="flex"><div class="day">Mardi :     </div><div class="hour">09h00 à 13h30 - 14h30 à 18h00</div></div>
+                            <div class="flex"><div class="day">Mercredi :  </div><div class="hour">09h00 à 13h30 - 14h30 à 18h00</div></div>
+                            <div class="flex"><div class="day">Jeudi :     </div><div class="hour">09h00 à 13h30 - 14h30 à 18h00</div></div>
+                            <div class="flex"><div class="day">Vendredi :  </div><div class="hour">09h00 à 13h30 - 14h30 à 18h00</div></div>
+                            <div class="flex"><div class="day">Samedi :    </div><div class="hour">09h00 à 13h30 - 14h30 à 18h00</div></div>
+                        </div>
+                        
+    
+                        <div class="acces f_column mb20">
+                                <h4 class="mb20">Accès</h4>
+                                <div class="flex"><div class="flex" id="access"><i class="fa-solid fa-train-tram"></i></div> Metro : Minimes - Ligne B</div>
+                                <div class="flex"><div class="flex" id="access"><i class="fa-solid fa-bus"></i></div>Bus : Minimes - Ligne 56, ligne 88</div>
+                                <div class="park flex"><div class="flex" id="access"><i class="fa-solid fa-square-parking"></i></div>Parking : 12 Rue Bernard Palissy, Toulouse</div>
+                                <div class="handycap flex"><div class="flex" id="access"><i class="fa-brands fa-accessible-icon"></i></div>Accès handicapés</div>
+    
+                        </div> 
+                        <div class="other_info">
+                            <h4 class="mb20">Autre infos</h4>
+                            <div id="other">
+                                <p>Code d'accès : 85C18</p>
+                                <p>Etage : 1er</p>
+                            </div>
+                        </div>          
+                        
+                    </div>
+                    <div class="box v_audio">
+                        <h4 class="mb20">Votre audioprothésiste</h4>
+                        <div class="audiopro">
+                            <div class="mb20">Le docteur Nathalie Chevallier, médecin généraliste, vous reçoit au sein de son cabinet situé à Toulouse.</div>
+                            <div>Le docteur Chevallier prend en charge l’ensemble des consultations de médecine générale tel que le traitement des maladies chroniques comme aiguës, la vaccination des plus jeunes ou la délivrance</div>
+                        </div>
+                        
+                    </div>
+                    <div class="box v_centre">
+                        <h4 class="mb20">Votre centre auditif</h4>
+                        <div class="centreaudit">
+                            <div class="mb20">Le docteur Nathalie Chevallier, médecin généraliste, vous reçoit au sein de son cabinet situé à Toulouse.</div>
+                            <div>Le docteur Chevallier prend en charge l’ensemble des consultations de médecine générale tel que le traitement des maladies chroniques comme aiguës, la vaccination des plus jeunes ou la délivrance</div>
+                        </div>
+                        
+                    </div>
+    
+                    <div class="avis_comment box">
+                        <h4 class="mb20">Avis et commentaires</h4>
+                        <div class="avis f_column">
+                            <div class="comment f_row">
+                                <div class="avatar flex"><img src="img/man.png" alt="man avatar"></div>
+                                <div class="username f_column">
+                                    Sam G.
+                                    <div class="stars f_row">
+                                        <img src="img/ic_star_24px.png" alt="">
+                                        <img src="img/ic_star_24px.png" alt="">
+                                        <img src="img/ic_star_24px.png" alt="">
+                                        <img src="img/ic_star_24px.png" alt="">
+                                        <img src="img/ic_star_24px.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="content">Accueil très agréable ! Le service était au top ! Je recommande fortement ce centre !</div>
+                            </div>
+                            <div class="comment f_row">
+                                <div class="avatar flex"><img src="img/woman.png" alt="woman avatar"></div>
+                                <div class="username f_column">Léa D.
+                                    <div class="stars f_row">
+                                        <img src="img/ic_star_24px.png" alt="">
+                                        <img src="img/ic_star_24px.png" alt="">
+                                        <img src="img/ic_star_24px.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="content">Le centre était très actifs. J’ai eu rapidement mon appareil auditif. Le service était bien. Merci</div>
+                            </div>
+                            <div class="comment f_row">
+                                <div class="avatar flex"><img src="img/man.png" alt="man avatar"></div>
+                                <div class="username f_column">Sam G.
+                                    <div class="stars f_row">
+                                        <img src="img/ic_star_24px.png" alt="">
+                                        <img src="img/ic_star_24px.png" alt="">
+                                        <img src="img/ic_star_24px.png" alt="">
+                                        <img src="img/ic_star_24px.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="content">Accueil très agréable ! Le service était au top ! Je recommande fortement ce centre !</div>
+                            </div>
+                            <div class="comment f_row" id="comment_hidden">
+                                <div class="avatar flex"><img src="img/woman.png" alt="woman avatar"></div>
+                                <div class="username f_column">Léa D.
+                                    <div class="stars f_row">
+                                        <img src="img/ic_star_24px.png" alt="">
+                                        <img src="img/ic_star_24px.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="content">Le centre était très actifs. J’ai eu rapidement mon appareil auditif. Le service était bien. Merci</div>
+                            </div>
+                        </div>
+                        <div class="btn">
+                            <button class="flex noborder" id="see_more">Voir plus</button>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="column-container">
+                    <div class="select_dr box" id="2">
+                        <h4 class="mb20">Vous pouvez choisir un audioprothésiste dans ce centre</h4>
+                        
+                        <div class="cards">
+                            <div class="f_row">
+                                <a href="#" class="card-link" data-name="Dr Sarah Dassa" data-speciality="Spécialité en pédiatrie">
+                                    <article class="card f_row">
+                                        <header class="article">
+                                            <img id="img_profil" src="img/girl-919048_1920 (1).png" alt="Dr Sarah Dassa">
+                                        </header>
+                                        <div class="f_column">
+                                            <h4 class="mb20">Sarah Dassa</h4>
+                                            <div class="content f_column">
+                                                <div class="f_column">
+                                                    <p>Audioprothésiste</p>
+                                                    <p>spécialité en pédiatrie</p>
+                                                </div>
+                                                <img class="flex" src="img/Groupe 200.png" alt="">
+                                            </div>
+                                        </div>
+                                        
+                                    </article>
+                                </a>
+                                <a href="#" class="card-link" data-name="Dr David Gérard" data-speciality="">
+                                    <article class="card f_row">
+                                        <header>
+                                            <img id="img_profil" src="img/people-1690965_1920.png" alt="Dr David Gérard">
+                                        </header>
+                                        <div class="f_column">
+                                            <h4 class="mb20">David Gérard</h4>
+                                            <div class="content f_column">
+                                                <div class="f_column">
+                                                    <p>Audioprothésiste</p>
+                                                </div>                                        
+                                                <img class="flex" src="img/Groupe 200.png" alt="">
+                                            </div>
+                                        </div>
+                                        
+                                    </article>
+                                </a>
+                            </div>
+                            <div class="f_row">
+                                <a href="#" class="card-link" data-name="Dr Sarah Dassa" data-speciality="Spécialité en pédiatrie">
+                                    <article class="card f_row">
+                                        <header>
+                                            <img id="img_profil" src="img/girl-919048_1920 (1).png" alt="Dr Sarah Dassa">
+                                        </header>
+                                        <div class="f_column">
+                                            <h4 class="mb20">Sarah Dassa</h4>
+                                            <div class="content f_column">
+                                                <div class="f_column">
+                                                    <p>Audioprothésiste</p>
+                                                    <p>spécialité en pédiatrie</p>
+                                                </div>
+                                                <img src="img/Groupe 200.png" alt="">
+                                            </div>
+                                        </div>
+                                        
+                                    </article>
+                                </a>
+                                <a href="#" class="card-link" data-name="Dr David Gérard" data-speciality="">
+                                    <article class="card f_row">
+                                        <header>
+                                            <img id="img_profil" src="img/people-1690965_1920.png" alt="Dr David Gérard">
+                                        </header>
+                                        <div class="f_column">
+                                            <h4 class="mb20">David Gérard</h4>
+                                            <div class="content f_column">
+                                                <div class="f_column">
+                                                    <p>Audioprothésiste</p>
+                                                </div>                                        
+                                                <img src="img/Groupe 200.png" alt="">
+                                            </div>
+                                        </div>
+                                        
+                                    </article>
+                                </a>
+                            </div>
+                            <div class="f_row" id="more_dr">
+                                <a href="#" class="card-link" data-name="Dr Sarah Dassa" data-speciality="Spécialité en pédiatrie">
+                                    <article class="card f_row">
+                                        <header>
+                                            <img id="img_profil" src="img/girl-919048_1920 (1).png" alt="Dr Sarah Dassa">
+                                        </header>
+                                        <div class="f_column">
+                                            <h4 class="mb20">Sarah Dassa</h4>
+                                            <div class="content f_column">
+                                                <div class="f_column">
+                                                    <p>Audioprothésiste</p>
+                                                    <p>spécialité en pédiatrie</p>
+                                                </div>
+                                                <img src="img/Groupe 200.png" alt="">
+                                            </div>
+                                        </div>
+                                        
+                                    </article>
+                                </a>
+                                <a href="#" class="card-link" data-name="Dr David Gérard" data-speciality="">
+                                    <article class="card f_row">
+                                        <header>
+                                            <img id="img_profil" src="img/people-1690965_1920.png" alt="Dr David Gérard">
+                                        </header>
+                                        <div class="f_column">
+                                            <h4 class="mb20">David Gérard</h4>
+                                            <div class="content f_column">
+                                                <div class="f_column">
+                                                    <p>Audioprothésiste</p>
+                                                </div>                                        
+                                                <img class="flex" src="img/Groupe 200.png" alt="">
+                                            </div>
+                                        </div>
+                                        
+                                    </article>
+                                </a>
+                            </div>
+                        </div>
+                        <button class="flex noborder" id="voir_plus">Voir plus</button>
+                    </div>
+    
+                    <div class="galerie_media box">
+                        <h4 class="mb20">Galerie de photos et vidéos du centre auditif</h4>
+                        <div class="img_top f_row mb20">
+                            <img src="img/girl-919048_1920 (1).png" alt="" id="img_top">
+                            <img src="img/girl-919048_1920 (1).png" alt="" id="img_top">                        
+                            <img src="img/girl-919048_1920 (1).png" alt="" id="img_top">
+                        </div>
+                        <div class="img_bottom f_row">
+                            <img src="img/girl-919048_1920 (1).png" alt="" id="img_bottom">     
+                            <img src="img/girl-919048_1920 (1).png" alt="" id="img_bottom">
+                            <img src="img/girl-919048_1920 (1).png" alt="" id="img_bottom">  
+                        </div>
+                    </div>
+                
+                    <div class="box services">
+                        <h4 class="mb20">Services</h4>
+                        <div class="f_row">
+                            <div class="f_column">
+                                <p class="mb20">Bilan auditif complet</p>
+                                <p class="mb20">Sélection et adaptation d'appareils auditifs</p>
+                                <p class="mb20">Suivi et entretien des appareils auditifs</p>
+                                <p>Conseils en prévention de la perte auditive</p>
+                            </div>
+                            <div class="f_column pl20">
+                                <p class="mb20">Essai d'aide auditive</p>
+                                <p class="mb20">Appareil contour d'oreille</p>
+                                <p class="mb20">Appareil intra-auriculaire</p>
+                                <p>Protections auditives</p>
+                            </div>
+                        </div>
+                
+                    </div>
+                    <div class="box speciality">
+                        <h4 class="mb20">Spécialités du centre</h4>
+                        <div class="f_row">
+                            <div class="f_column">
+                                <p class="mb20">Bilan auditif complet</p>
+                                <p class="mb20">Acouphène</p>
+                                <p>Protections auditives sur mesure - Nuisances sonores</p>
+                            </div>
+                        
+                            <div class="f_column pl20">
+                                <p class="mb20">Langage des signes</p>
+                                <p>Appareil intra-auriculaire</p>  
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="box prestation">
+                        <h4 class="mb20">Prestation et prise en charge</h4>
+                        <div class="f_row">
+                            <div class="f_column">
+                                <p class="mb20">Offre 100% Santé - Reste à charge 0 €</p>
+                                <p class="mb20">Carte Vitale acceptée </p>
+                                <p class="">Tiers-payant Sécurité sociale</p>
+                            </div>
+                            <div class="tiers f_column pl20">
+                                <p>Tiers-payant Mutuelle</p>
+                                <span>Almerys</span>
+                                <span>Viamedis</span>
+                                <span>Kalivia</span>
+                                <span>Santé Claire</span>
+                            </div>
+                        </div>
+                
+                    </div>
+                    <div class="box congrat">
+                        <h4 class="mb20">Diplômes et expériences</h4>
+                        <div class="f_column">
+                            <p class="mb20">Diplôme d'Etat de docteur en médecine - Université Toulouse 3 - Paul Sabatier</p>
+                            <p class="">Diplôme d'Etat de docteur en médecine - Université Toulouse 3 - Paul Sabatier</p>
+                        </div>
+                    </div>
+                    <div class="box mode">
+                        <h4 class="mb20">Mode de paiement</h4>
+                        <div class="f_column">
+                            <p class="mb20">CB</p>
+                            <p class="mb20">Chèques</p>
+                            <p>Espèces</p>
+                        </div>
+                    </div>
+    
+                    <div class="faq box">
+                        <h4 class="mb20">Foires Aux Questions</h4>
+                        <img class="flex" src="img/FAQ.png" alt="image FAQ">
+                        <div class="f_column mb20">
+                            <div class="f_row"><i class="fa-solid fa-magnifying-glass"></i><a href="">Quels sont les premiers symptômes de la perte auditive ?</a></div>
+                            <div class="f_row"><i class="fa-solid fa-magnifying-glass"></i><a href="">Qu'est-ce qu'un audiogramme ?</a></div>
+                            <div class="f_row"><i class="fa-solid fa-magnifying-glass"></i><a href="">Comment choisir mon audioprothésiste ?</a></div>
+                            <div class="f_row"><i class="fa-solid fa-magnifying-glass"></i><a href="">Pourquoi dois-je porter un appareil ?</a></div>
+                            <div class="f_row"><i class="fa-solid fa-magnifying-glass"></i><a href="">Quel est le prix des appareils auditifs ?</a></div>
+                            <div class="f_row"><i class="fa-solid fa-magnifying-glass"></i><a href="">Quel est le remboursement d'un appareil ?</a></div>
+                            <div class="f_row"><i class="fa-solid fa-magnifying-glass"></i><a href="">Comment choisir entre intra et contour d'oreille ?</a></div>
+                            <div class="f_row"><i class="fa-solid fa-magnifying-glass"></i><a href="">Je fais comment si je perds mon appareil ?</a></div>
+                            <div class="f_column hide" id="faq_hidden">
+                                <div class="f_row"><i class="fa-solid fa-magnifying-glass"></i><a href="">Quels sont les premiers symptômes de la perte auditive ?</a></div>
+                                <div class="f_row"><i class="fa-solid fa-magnifying-glass"></i><a href="">Comment choisir mon audioprothésiste ?</a></div>
+                                <div class="f_row"><i class="fa-solid fa-magnifying-glass"></i><a href="">Comment choisir entre intra et contour d'oreille ?</a></div>
+                            </div>
+                            
+                        </div>
+                        <div class="btn">
+                            <button class="flex noborder" id="faq_more">Voir plus</button>
+                        </div>
+                    </div>    
+                    
+                </div>   
+            </div> 
+            
+                <section class="actu">
+                    <h3 class="mb20">Découvrez les dernières actualités auditives avec My Audio</h3>
+                    <div class="flex" id="actu">
+                        <div class="cards">
+                            <article class="card">
+                                <header>
+                                    <img src="img/greffe-des-osselet-i.png" alt="greffe d'osselet">
+                                </header>
+                                <h4 class="mb20">Santé</h4>
+                                <h3 class="mb20" id="card">Première greffe mondiale</h3>
+                                <p class="calend mb20"><i class="fa-regular fa-calendar" id="card"></i>1 Sept 2020</p>
+                                <div class="content">
+                                    <p> Première greffe mondiale réalisée grâce à des os de l’oreille moyenne imprimés en 3D – Afrique du Sud, Pretori </p>
+                                </div>
+                            </article>
+            
+                            <article class="card">
+                                <header>
+                                    <img src="img/grandparents-2807673.png" alt="grands-parents">
+                                </header>
+                                <h4 class="mb20">Santé</h4>
+                                <h3 class="mb20" id="card">Première greffe mondiale</h3>
+                                <p class="calend mb20"><i class="fa-regular fa-calendar" id="card"></i>1 Sept 2020</p>
+                                <div class="content">
+                                    <p> Première greffe mondiale réalisée grâce à des os de l’oreille moyenne imprimés en 3D – Afrique du Sud, Pretori </p>
+                                </div>
+                            </article>
+            
+                            <article class="card">
+                                <header>
+                                    <img src="img/ACOUPHENE-HOMME-scal.png" alt="accouphène chez l'homme"> 
+                                </header>
+                                <h4 class="mb20">Santé</h4>
+                                <h3 class="mb20" id="card">Première greffe mondiale</h3>
+                                <p class="calend mb20"><i class="fa-regular fa-calendar" id="card"></i>1 Sept 2020</p>
+                                <div class="content">
+                                <p> Première greffe mondiale réalisée grâce à des os de l’oreille moyenne imprimés en 3D – Afrique du Sud, Pretori </p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    
+                </section>
+            
+                <div class="test_audit">
+                    <div class="test f_column mb20">
+                        <img class="mb20" id="test" src="img/Groupe 451.png" alt="test auditif">
+                        <button class="mb20 cwhite">Test auditif</button>
+                        <p>test auditif et résultat immédiat</p>
+                    </div>
+                    
+                </div>
+            
+        </main>
+        
+
+        <footer>
+        </footer>
+        <script src="js/index.js"></script>
+        
+        <script type="module" src="js/calendar.js"></script>
+    </body>
+</html>

@@ -1,0 +1,782 @@
+/************ générique **********/
+* {
+    margin: 0;
+    font-family: "Dosis", sans-serif;
+    box-sizing: border-box;
+}
+
+html  {
+    max-width: 100% !important ;
+    overflow-x: hidden;
+}
+
+a.avis {
+    font-weight: bold;
+    color: #2FC39E;
+    font-size: small;
+}
+
+main {
+    position: relative;
+}
+
+body{
+    position: relative;
+}
+
+#img_fond2 {
+    position: absolute;
+    width: 1151.5px;
+    height: 1300px;
+    left: -614px;
+    top: 614px;
+
+    z-index: -5;
+}
+
+/**************/
+/*********** header ***********/
+    header.body {
+        padding: 2.5rem 0 20rem 2.5rem;
+        position: relative;
+        overflow: hidden;
+        max-height: 20rem;
+        max-width: 1440px;
+    }
+    header.body div {
+        align-items: center;
+        padding-top: 2.5rem;
+        margin-left: 33%;
+        font-size: 2.5rem;
+    }
+    header.body div button.savoir_plus {
+        color:#2FC39E;
+        border:#2FC39E solid 3px;
+        border-radius: 5px;
+        margin-right: 2.5rem;
+        background: #fff;
+    }
+    #img_fond1 {
+        position: absolute;
+
+        margin: -100px -150px;
+
+        top: -680px;
+        right: -400px;
+
+        z-index: -5;
+    }
+    header #logo {
+        position: absolute;
+    }
+/****************/
+/*** main ****/
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        padding: 9.375rem;
+        max-width: 1440px;
+        width: 100%;
+        overflow: hidden;
+    }
+/*********** container ***********/
+    .container {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 2rem;
+    }
+
+    .column-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    /**********/
+    /****** centre *******/
+        div.centre {
+            display: grid;
+        }
+        div.logo_info {
+            padding-right: 1.25rem;
+        }
+        div.logo_info div#avis {
+            justify-content: center;
+        }
+        div.centre_info_text {
+            margin-left: 20px;
+        }
+        div.centre_info_text h3,
+        div.centre_info_text h4,
+        div.centre_info_text div#adresse {
+            margin-bottom: 10px;
+        }
+        div.centre_info_text div#contact{
+            display: none;
+        }
+        div#r_sociaux {
+            align-items: start;
+            margin: 0 auto;
+        }
+        div#r_sociaux div#social {
+            margin-right: 10px;
+            
+        }
+
+        div.centre div#logo {
+            background-color: white;
+            width: 153px;
+            height: 143px;
+            justify-content: center;
+            align-items: center;
+        }
+        #logo img {
+            height: 36px;
+        }
+        div.logo_info img{
+            width: 120px;
+            margin: auto;
+        }
+        button#show_num {
+            background-color: #2FC39E;        
+            border-radius: 5px
+        }
+    /**************/
+    /****** information docteur *****/
+        div.info_dr {
+            display: grid;
+            gap: 10px;
+        }
+        div.img_info {
+            height: 9em;
+        }
+        div.img_info #img_profil{
+            padding: 10px;
+            height: 6em;
+        }
+        #notation {
+            width: 90px;
+            margin: auto;
+        }
+        div.dr_info h3 {
+            margin-bottom: 15px;
+        }
+
+        div.dr_info div#avis_dr {
+            margin-top: 15px;
+            font-size: small;
+        }
+    /***********/
+    /****** calendrier *****/    
+        div.calendar .date-selection {
+            display: flex;
+            align-items: center;
+        }
+
+        div.calendar #calendar {
+            text-align: center;
+        }
+        
+        div.calendar .date-selection button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 0.5rem;
+            cursor: pointer;
+        }
+        
+        div.calendar .dates-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        div.calendar .day {
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            text-align: center;
+            min-width: 3rem;
+            cursor: pointer;
+        }
+        
+        div.calendar .day:hover {
+            background-color: #2FC39E;
+
+        }
+        div.calendar .selected-day {
+            background-color: #2FC39E;
+        }
+        div.calendar #time {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        div.calendar .appointment-button {
+            width: 150px;
+            height: 40px;
+            margin: 10px;
+            text-align: center;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        div.calendar .selected-time,
+        div.calendar .selected-time:hover {
+            background-color: #2FC39E; 
+        }
+        
+        div.calendar .see-more-button {
+            width: 100px;
+            height: 30px;
+            margin: 10px;
+            text-align: center;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        div.calendar #submit-appointment {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 0.5rem 1rem;
+            margin-top: 1rem;
+            cursor: pointer;
+        }
+        
+        div.calendar #submit-appointment:hover {
+            background-color: #0056b3;
+        }
+        div.calendar #prev-week {
+            margin-right: 10px;
+        }
+        
+        div.calendar #next-week {
+            margin-left: 10px;
+        }
+          
+    /*******/
+    /****** maps ******/
+        .maps {
+            justify-content: center;
+            align-items: center;
+        }
+        .maps img {
+            width: 550px;
+        }
+        div.info_centre div.open {
+            margin-bottom: 0.625rem;
+            display: grid;
+        }
+        div.info_centre div.open div.day,
+        div.info_centre div.other_info div#other {
+            padding-left: 10px;
+        }
+        div.info_centre div.open div.day {
+            width: 20%;
+        }
+        div.info_centre div.acces div#access {
+            width: 4%;
+            align-items: center;
+            justify-content: center ;
+        }
+        div.info_centre div.acces div.park,
+        div.info_centre div.acces div.handycap {
+            margin-top: 10px;
+        }
+    /********/
+    /****** votre audioprothésiste + votre centre ******/
+        
+        div.v_audiopro div:last-child,
+        div.v_centre_audit div:last-child {
+            padding: 20px 0 30px;
+
+        }
+    /****** avis et commentaires *****/
+        div.avis_comment div.comment {
+            height: 80px;
+            border-top: #000000 solid 1px;
+            padding-top: 10px;
+            margin-bottom: 10px;
+        }
+        div.avis_comment div.comment:last-child {
+            display: none;
+        }
+        div.avis_comment div.avatar img{
+            width: 40px;
+            height: 40px;
+            justify-content: center;
+            align-items: center;
+        }
+        div.avis_comment div.username {
+            width: 200px;
+        }
+        div.avis_comment .stars {
+            justify-content: center;
+        }
+        div.avis_comment div.content {
+            width: 90%;
+        }
+        div.avis_comment button {
+    
+            margin: -25px auto;
+            padding: 0 30px;
+        }
+
+
+    /**** Selection médecin ****/
+        
+        div.select_dr .cards {
+            display: grid;
+            gap: 10px;
+        }
+        div.select_dr .card.focused {
+            background-color: #CCFFF4;
+        }
+        div.select_dr a {
+            text-decoration: none;
+            color: #000000;
+        }
+        div.select_dr article {
+            padding-right: 20px;
+        }
+        div.select_dr .card{
+            border-radius: 10px;
+            padding-left: 20px;
+        }
+        div.select_dr article header {
+            margin: auto;
+        }
+        div.select_dr .card h4 {
+            color: #04BE96;
+            margin-bottom: 10px;
+        }
+        div.select_dr .card .content img {
+            width: 100px;
+            margin-top: 10px;
+            align-items: center;
+        }
+        div.select_dr .cards #img_profil {
+            height: 6em;
+            padding-right: 10px;
+        }
+        div.select_dr #more_dr {
+            display: none;
+        }
+        div.select_dr button {
+            height: 20px;
+            padding-bottom: 30px;
+            margin: auto;
+        }
+
+    /****** galerie image ******/
+        div.galerie_media div.img_top {
+            margin-left: -20px;
+            justify-content: space-around;
+        }
+        div.galerie_media div.img_bottom {
+            margin-left: -20px;
+            justify-content: space-around;
+        }
+        div.galerie_media div.img_top img {
+            height: 6em;
+        }
+        div.galerie_media div.img_bottom img {
+            height: 5em;
+        }
+
+        
+    /****** services ******/
+    /****** spécialité *******/
+    /****** prestation et tarif *******/
+        div.services div.column:last-child,
+        div.special div.column:last-child,
+        div.presta div.column:last-child {
+            padding-left: 20px;
+        }
+        div.services div.flex p,
+        div.special div.flex p, 
+        div.presta div.flex p {
+            margin-bottom: 10px;
+        }
+        div.presta div.column:last-child p {
+            margin-bottom: 0px;
+        }
+        div.tiers span {
+            font-size: small;
+            padding-left: 10px;
+        }
+    /****** diplome et expérience ******/
+    /****** information paiement ******/
+        div.exp div.column > p,
+        div.paiement div.column > p {
+            margin: 10px 0;
+        }
+        div.exp div.column:last-child,
+        div.paiement div.column:last-child {
+            padding-bottom: 10px;
+        }
+    
+    /****** FAQ ******/
+        div.faq {
+            position: relative;
+        }
+        div.faq a {
+            text-decoration: none;
+            color: #000000;
+        }
+        div.faq img {
+            position: absolute ;
+            top: 20px;
+            right: 20px;
+        }
+        div.faq div.hide {
+            display: none;
+        }
+        div.faq button {
+            margin: -45px auto;
+            padding: 20px 30px;
+        }
+/********** Actu **********/
+section.actu {
+    margin-bottom: 2.5rem;
+    margin-top: 2.5rem;
+    text-align: center;
+}
+.actu #actu {
+    justify-content: center;
+}
+section.actu .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 20px;
+}
+
+section.actu .card {
+    display: grid;
+}
+
+section.actu .card img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+section.actu .card h4 {
+    color: #2FC39E;
+    text-align: center;
+    margin-top: 1.25rem;
+}
+section.actu .card h3 {
+    text-align: center;
+}
+section.actu .calend {
+    text-align: center;
+}
+section.actu #card {
+    color: #000000;
+}
+
+
+/********** test auditif ***********/
+.test_audit {
+    display: grid;
+}
+.test_audit .test {
+    justify-content: center;
+    align-items: center;
+}
+.test_audit .test img#test {
+    width: 25rem;
+    height: 25rem;
+}
+.test_audit .test button {
+    background-color: #3489CA;
+    font-size: 5rem;
+    width: 466.6px;
+    height: 97.7px;
+    padding: 0.1em 0.2em 0.15em;
+    border-radius: 15px;
+}
+.test_audit .test p {
+    height: 50px;
+}
+
+/*********** footer ***********/
+footer {
+    width: 100% ;
+    background-image: url('/img/Composant\ 1\ –\ 2.png');
+    background-repeat: no-repeat;
+    height: 14.375rem;
+    background-color: #04be96;
+}
+
+@media screen and (min-width: 1642px) {
+    header.body div {
+        margin-left: 50%;
+    }    
+}
+@media screen and (min-width:1212px){
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    main{
+        width: 100%;
+        padding: 0;
+        overflow: auto;
+        top: -100px;
+    }
+    header.body{
+        width: 100%;
+        max-width: 2560px;
+    }
+}
+@media screen and (max-width: 1211px) {
+    main {
+        top: -250px;
+    }    
+}
+
+@media screen and (max-width : 1168px) {
+    
+    .container{
+        grid-template-columns: 1fr;
+    }
+    div.avis_comment div.comment {
+        height: auto;
+    }
+
+}
+@media screen and (max-width: 1024px) {
+    .fs40 {
+        font-size: 1.8rem;
+    }
+    header.body div button.savoir_plus {
+        margin-right: 20px;
+    }
+    
+}
+@media screen and (max-width: 768px) {
+    header #logo {
+        width: 10rem;
+        top: 40px;
+        left: 10px;
+    }
+    header.body div {
+        margin-left: 20%;
+    }
+    div.column-container{
+        display: contents;
+    }
+    /* centre */
+    /* choix audio */
+    div.select_dr {
+        grid-row: 2;
+    }
+    /* calendrier */
+    div.calendar {
+        grid-row: 3;
+    }
+    /* galerie image */
+    div.galerie_media {
+        grid-row: 4;
+    }
+    /* horaire + maps */
+    div.info_centre {
+        grid-row: 5;
+    }
+    /* services */
+    div.services {
+        grid-row: 6;
+    }
+    /* votre audio */
+    div.v_audio {
+        grid-row: 7;
+    }
+    /* votre centre audio */
+    div.v_centre {
+        grid-row: 8;
+    }
+    /* spécialité centre */
+    div.speciality {
+        grid-row: 9;
+    }
+    /* prestation */
+    div.prestation {
+        grid-row: 10;
+    }
+    /* diplome */
+    div.congrat {
+        grid-row: 11;
+    }
+    /* mode de paiement */
+    div.mode {
+        grid-row: 12;
+    }
+    /* FAQ */
+    div.faq {
+        grid-row: 13;
+    }
+    /* Avis et commentaires */
+    div.avis_comment {
+        grid-row: 14;
+    }
+    /* Actu */
+    div.actu {
+        grid-row: 15;
+    }
+    
+}
+@media screen and (max-width : 425px) {
+    main{
+        padding: 10px;
+        top: 20px;
+    }
+    header.body div {
+        margin-left: 33%;
+    }
+    header.body span {
+        color: #04BE96;
+        font-size: 1rem;
+    }
+
+    .fs40 {
+        font-size: 1.2rem;
+    }
+    .box {
+        max-width: 425px;
+    }
+
+    #img_fond1,
+    #img_fond2 {
+        display: none;
+    }
+
+    header #logo {
+        width: 6rem;
+        top: 40px;
+        left: 10px;
+    }
+    header.body {
+        padding: 0;
+    }
+    header.body div .savoir_plus {
+        margin-right: 1.25rem;
+    }
+    .container {
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+    div#r_sociaux {
+        margin-left: -50px;
+    }
+    .footer {
+        height: 7rem;
+    }
+    .maps img {
+        width: 350px;
+    }
+    div.info_centre .acces .flex #access i {
+        margin-right: 5px;
+    }
+    div.logo_info {
+        padding-right: 0;
+    }
+    div.select_dr .cards {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+    div.select_dr article {
+        padding-right: 10px;
+    }
+    div.select_dr div.cards > div.f_row {
+        flex-direction: column;
+    }
+    div.select_dr div.cards .card {
+        margin-bottom: 10px;
+        height: 8rem;
+    }
+    div.select_dr div.cards div.f_row .card-link .card > .f_column {
+        padding-top: 10px;
+        width: 150px;
+    }
+    div.galerie_media div.img_top,
+    div.galerie_media div.img_bottom  {
+        margin-left: 0;
+    }
+    footer {
+        background-position-x: -90px;
+    }
+    div.faq img {
+        width: 3rem;
+    }
+}
+@media screen and (max-width: 320px) {
+    html {
+        text-align: center;
+        font-size: 1rem;
+    }
+    .box {
+        max-width: 320px;
+        padding: 0.4rem;
+    }
+    .pl20{
+        padding-left: 0;
+    }
+    .f-row {
+        flex-direction: column;
+    }
+    div.centre .centre_info {
+        display: contents;
+    }
+    div.centre .logo_info #logo{
+        width: 100%;
+    }
+    div.centre_info_text {
+        margin-left: 0;
+        grid-column: 1;
+        grid-row: 3 / 3;
+    }
+    div.centre #r_sociaux {
+        margin: 10px auto;
+    }
+    div.info_centre div.open div.day, 
+    div.info_centre div.other_info div#other {
+        padding-left: 0px;
+    }
+    .open,
+    .acces,
+    .other_info {
+        text-align: start;
+    }
+    div.info_centre div.open div.day {
+        width: 25%;
+    }
+    #access {
+        margin-right: 5px;
+        padding-left: 0;
+    }
+    div.faq img {
+        top: 3px;
+        right: 3px;
+    }
+    .test_audit .test img#test {
+        width: 10rem;
+        height: 10rem;
+    }
+    .test_audit .test button {
+        width: 300px;
+        font-size: 1.5rem;
+    }
+}

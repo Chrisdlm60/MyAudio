@@ -1,0 +1,18 @@
+REPRENDRE LES BLOCS POUR LE RESPONSIVE EN METTANT LES BLOCS 
+DANS L'ORDRE SUIVANT:
+
+- BLOC CENTRE
+- Bloc choisir un audio dans ce centre
+- Bloc motif + horaire + prendre rdv
+- Bloc galerie image et vidéo
+- Bloc horaire du centre + Map
+- Bloc Service
+- Bloc Votre audioprothésiste
+- bloc Votre centre auditif
+- Bloc Spécialité du centre
+- Prestation et prise en charge
+- Diplôme
+- Mode de paiement
+- Foire aux questions
+- Avis et commentaires
+- Actualité
