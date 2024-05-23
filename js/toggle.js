@@ -1,10 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
 
     let compteur = 0;
-    /**
-     * 
-     * @param {number} deg 
-     */
+    
     function rotateDisplay(deg){
         let el = document.getElementById('faq_more_V');
         let degree = deg;

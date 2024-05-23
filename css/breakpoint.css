@@ -1,15 +1,42 @@
-@media screen and (max-width: 2560px){
+@media screen and (min-width: 2560px){
     section.actu .box {
         max-width: 76.6rem;
     }
-}
-@media screen and (min-width: 1642px) {
     header.body div.flex {
         margin-left: 50%;
+    } 
+}
+@media screen and (min-width: 2330px) and (max-width: 2559px) {
+    header.body div.flex {
+        margin-left: 45%;
+    } 
+    
+}
+@media screen and (min-width: 2140px) and (max-width: 2330px) {
+    header.body div.flex {
+        margin-left: 45%;
+    } 
+    
+}
+@media screen and (min-width: 1850px) and (max-width: 2140px) {
+    header.body div.flex {
+        margin-left: 35%;
+    } 
+    
+}
+@media screen and (min-width: 1730px) and (max-width: 1850px) {
+    header.body div.flex {
+        margin-left: 30%;
+    } 
+    
+}
+@media screen and (min-width: 1642px) and (max-width: 1730px) {
+    header.body div.flex {
+        margin-left: 25%;
     }    
 }
 
-@media screen and (min-width:1212px){
+@media screen and (max-width:1440){
     body{
         display: flex;
         flex-direction: column;
@@ -19,11 +46,10 @@
         width: 100%;
         padding: 0;
         overflow: auto;
-        top: -100px;
+        top: -400px;
     }
     header.body{
         width: 100%;
-        max-width: 2560px;
     }
 }
 @media screen and (max-width: 1211px) {
@@ -139,16 +165,21 @@
     }
 }
 @media screen and (max-width: 768px) {
-    header.body div.flex a,
-    header.body div.flex i{
+    header.body div.flex a{
         margin-top: 20px;
+    }
+    header.body div.flex a:last-child{
+        margin-right: 20px;
+    }
+    header.body div.flex i {
+        margin-top: 10px;
     }
     header.body div.flex div.savoir_plus {
         position: absolute;
         top: 10px;
         left: auto;
-        right: 0;
-        width: 50%;
+        right: -15px;
+        width: 70%;
     }
     
     
@@ -158,9 +189,17 @@
         padding: 10px;
         top: 20px;
     }
-    
-    header.body div {
-        margin-left: 33%;
+    header{
+        background-color: #04BE96;
+        height: 100px;
+    }
+    header.body div.flex a {
+        margin: 0 5px;
+    }
+    header.body div.flex i {
+        position: absolute;
+        top: 33px;
+        right: 5px;
     }
     header.body span {
         color: #04BE96;
@@ -186,7 +225,8 @@
 
     header #logo {
         width: 6rem;
-        top: 40px;
+        height: 4rem;
+        top: 20px;
         left: 10px;
     }
     header.body {
@@ -266,12 +306,25 @@
         margin: -35px auto;
     }
 }
+@media screen and (max-width: 375px) {
+    header.body div.flex {
+        display: inline-grid;
+        right: 20px;
+    }
+    header.body div.flex div.savoir_plus{
+        width: 130%;
+    }
+    header.body div.flex i {
+        top: 55px;
+        right: -12px;
+    }
+    
+}
 @media screen and (max-width: 320px) {
     html {
         text-align: center;
         font-size: 1rem;
-    }
-    
+    }    
     .box {
         max-width: 320px;
         padding: 0.4rem;
