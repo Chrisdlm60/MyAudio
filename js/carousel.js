@@ -8,6 +8,7 @@ class Carousel {
     constructor (element, options ={}){
         this.element = element;
         this.options = Object.assign({},{
+            // options par défaut
             slidesToScroll: 1,
             slidesVisible: 3
         }, options)
@@ -54,7 +55,6 @@ class Carousel {
         let ratio = this.items.length / this.options.slidesVisible
         this.container.style.width = (ratio * 100)+ '%';
         this.items.forEach(item => item.style.width = ((100 / this.options.slidesVisible) / ratio) + '%');
-
     }
 
     createNavigation () {

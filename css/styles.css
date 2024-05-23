@@ -354,6 +354,7 @@ body{
         }
         div.avis_comment div.username {
             width: 200px;
+            text-align: center;
         }
         div.avis_comment .stars {
             justify-content: center;
@@ -533,6 +534,7 @@ body{
         position: absolute;
         width: 50px;
         height: 40px;
+        font-size: 1.2rem;
         border-radius: 9px;
         top: 50%;
         margin-top: -20px;
