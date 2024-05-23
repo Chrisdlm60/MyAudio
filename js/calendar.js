@@ -163,7 +163,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     addTimeButton.dataset.date = selectedDate.toISOString();
                     addTimeButton.dataset.time = time;
                     addTimeButton.classList = 'hide timeHidden';
-                    // addTimeButton.classList = 'timeHidden';
                     addTimeButton.addEventListener('click', () => this.selectTime(addTimeButton));
                     timeContainer.appendChild(addTimeButton);
                 })
