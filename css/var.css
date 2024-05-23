@@ -7,7 +7,8 @@ i {
 
 .box{
     padding: 1.25rem;
-    background-color: rgb(240,240,240);
+    background-color: #fafafa;
+    border: #d0d0d0 solid 1px;
     border-radius: 10px;
     width: 100%;
     max-width: 37.5rem;
@@ -57,9 +58,8 @@ i {
 }
 .btn {
     padding: 16px;
-    border-radius: 10%;
     cursor: pointer;
-    border-top: #000000 solid 1px;
+    border-top: #d0d0d0 solid 1px;
     border-radius: 0;
 }
 

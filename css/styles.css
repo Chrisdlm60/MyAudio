@@ -3,6 +3,7 @@
     margin: 0;
     font-family: "Dosis", sans-serif;
     box-sizing: border-box;
+    color: #434343;
 }
 
 html  {
@@ -33,6 +34,9 @@ body{
 
     z-index: -5;
 }
+#question {
+    color: #ffffff;
+}
 
 /**************/
 /*********** header ***********/
@@ -41,20 +45,29 @@ body{
         position: relative;
         overflow: hidden;
         max-height: 20rem;
-        max-width: 1440px;
     }
-    header.body div {
+    header.body div.flex {
         align-items: center;
         padding-top: 2.5rem;
-        margin-left: 33%;
+        margin-left: 15%;
         font-size: 2.5rem;
+        text-wrap: nowrap;
     }
-    header.body div button.savoir_plus {
+    header.body div.flex .savoir_plus,
+    header.body a.cwhite {
+        margin: 0 20px;
+    }
+    header.body div div.savoir_plus {
         color:#2FC39E;
         border:#2FC39E solid 3px;
-        border-radius: 5px;
+        border-radius: 9px;
         margin-right: 2.5rem;
-        background: #fff;
+        background: #ffffff;
+
+        z-index: -2;
+    }
+    header.body span {
+        z-index: 1;
     }
     #img_fond1 {
         position: absolute;
@@ -64,10 +77,12 @@ body{
         top: -680px;
         right: -400px;
 
-        z-index: -5;
+        z-index: -1;
     }
     header #logo {
         position: absolute;
+        width: 12%;
+        height: 25%;
     }
 /****************/
 /*** main ****/
@@ -172,10 +187,14 @@ body{
             text-align: center;
         }
         div.calendar #consultation-type {
-            width: 50%;
-            height: 30px;
-            border-radius: 20px;
+            width: 100%;
+            height: 40px;
+            border-radius: 9px;
             text-align: center;
+            font-size: 1.9rem;
+            margin-bottom: 20px;
+        }
+        div.calendar #consultation-type > option{
             font-size: 1rem;
         }
         div.calendar .date-selection {
@@ -188,8 +207,8 @@ body{
         }
         
         div.calendar .date-selection button {
-            background-color: #007bff;
-            color: white;
+            background-color: #fafafa;
+            color: #007bff;
             border: none;
             padding: 0.5rem;
             cursor: pointer;
@@ -203,7 +222,7 @@ body{
         
         div.calendar .day {
             padding: 0.5rem;
-            border: 1px solid #ccc;
+            border-radius: 9px;
             text-align: center;
             min-width: 3rem;
             cursor: pointer;
@@ -214,20 +233,33 @@ body{
         div.calendar .selected-time,
         div.calendar .selected-time:hover {
             background-color: #CCFFF4;
-
         }
-        div.calendar .time-selection {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-        }
+        
         div.calendar #time {
-            display: contents;
-            grid-row: auto;
+            display: flex;
+            margin: auto;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 70px;
         }
         div.calendar #time > button {
-            border-radius: 10px;
+            border-radius: 1px;
             margin: 5px 5px;
             font-size: 1rem;
+            background-color: #2ABADA;
+            justify-content: center;
+            border: none;
+            color: #ffffff;
+        }
+        div.calendar #time button.hide {
+            display: none;
+        }
+        div.calendar #time button.see_more {
+            background-color: #fafafa;
+            text-wrap: nowrap;
+            border: none;
+            color: #434343;
         }
         
         div.calendar .appointment-button {
@@ -242,10 +274,10 @@ body{
         }
         
         div.calendar #submit-appointment {
-            background-color: #007bff;
+            background-color: #04BE96;
             color: #fff;
             border: none;
-            border-radius: 10px;
+            border-radius: 9px;
             padding: 0.5rem 1rem;
             margin-top: 1rem;
             cursor: pointer;
@@ -307,7 +339,7 @@ body{
     /****** avis et commentaires *****/
         div.avis_comment div.comment {
             height: 80px;
-            border-top: #000000 solid 1px;
+            border-top: #D0D0D0 solid 1px;
             padding-top: 10px;
             margin-bottom: 10px;
         }
@@ -330,7 +362,7 @@ body{
             width: 90%;
         }
         div.avis_comment button {
-    
+            background-color: #FAFAFA;
             margin: -25px auto;
             padding: 0 30px;
         }
@@ -379,6 +411,7 @@ body{
             height: 20px;
             padding-bottom: 30px;
             margin: auto;
+            background-color: #fafafa;
         }
 
     /****** galerie image ******/
@@ -432,6 +465,7 @@ body{
     /****** FAQ ******/
         div.faq {
             position: relative;
+            height: 250px;
         }
         div.faq a {
             text-decoration: none;
@@ -447,354 +481,139 @@ body{
         }
         div.faq button {
             margin: -45px auto;
-            padding: 20px 30px;
+            padding: 10px 30px;
+            background-color: #fafafa;
+        }
+        div.faq button.faq_more {
+            color: #2ABADA;
+            justify-content: center;
+            padding: 0;
+            width: 20px;
+            height: 20px;
+            margin-top: 40px;
+            font-size: medium;
+            font-weight: 700;
         }
 /********** Actu **********/
-section.actu {
-    margin-bottom: 2.5rem;
-    margin-top: 2.5rem;
-    text-align: center;
-}
-.actu #actu {
-    justify-content: center;
-}
-section.actu .cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-    gap: 20px;
-}
-
-section.actu .card {
-    display: grid;
-}
-
-section.actu .card img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-}
-
-section.actu .card h4 {
-    color: #2FC39E;
-    text-align: center;
-    margin-top: 1.25rem;
-}
-section.actu .card h3 {
-    text-align: center;
-}
-section.actu .calend {
-    text-align: center;
-}
-section.actu i.calend {
-    color: #000000;
-}
-
-
-/********** test auditif ***********/
-.test_audit {
-    display: grid;
-}
-.test_audit .test {
-    justify-content: center;
-    align-items: center;
-}
-.test_audit .test img#test {
-    width: 25rem;
-    height: 25rem;
-}
-.test_audit .test button {
-    background-color: #3489CA;
-    font-size: 5rem;
-    width: 466.6px;
-    height: 97.7px;
-    padding: 0.1em 0.2em 0.15em;
-    border-radius: 15px;
-}
-.test_audit .test p {
-    height: 50px;
-}
-
-/*********** footer ***********/
-footer {
-    width: 100% ;
-    background-image: url('/img/Composant\ 1\ –\ 2.png');
-    background-repeat: no-repeat;
-    height: 14.375rem;
-    background-color: #04be96;
-}
-
-@media screen and (min-width: 1642px) {
-    header.body div {
-        margin-left: 50%;
-    }    
-}
-@media screen and (min-width:1212px){
-    body{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    main{
-        width: 100%;
-        padding: 0;
-        overflow: auto;
-        top: -100px;
-    }
-    header.body{
+    section.actu .box{
+        margin-bottom: 2.5rem;
+        margin-top: 2.5rem;
+        text-align: center;
         width: 100%;
         max-width: 2560px;
     }
-}
-@media screen and (max-width: 1211px) {
-    main {
-        top: -250px;
-    }    
-}
-
-@media screen and (max-width : 1168px) {
-    
-    .container{
-        grid-template-columns: 1fr;
+    .actu #actu {
+        justify-content: center;
     }
-    div.avis_comment div.comment {
-        height: auto;
+    section.actu .cards {
+        position: relative;
+        overflow: hidden;
+    }
+    section.actu .item {
+        margin: 40px 10px;
     }
 
-}
-@media screen and (max-width: 1024px) {
-    main {
-        padding: 5rem;
-    }
-    .fs40 {
-        font-size: 1.8rem;
-    }
-    header.body div button.savoir_plus {
-        margin-right: 20px;
-    }
-    
-    header #logo {
-        width: 10rem;
-        top: 15px;
-        left: 5px;
-        filter: drop-shadow(1px 1px 4px white);
-    }
-    header.body div {
-        margin-left: 18%;
-    }
-    div.column-container{
-        display: contents;
-    }
-    /* centre */
-    /* choix audio */
-    div.select_dr {
-        grid-row: 2;
-    }
-    /* calendrier */
-    div.calendar {
-        grid-row: 3;
-    }
-    /* info docteur */
-    div.info_dr {
-        grid-row: 4;
-    }
-    /* galerie image */
-    div.galerie_media {
-        grid-row: 5;
-    }
-    /* horaire + maps */
-    div.info_centre {
-        grid-row: 6;
-    }
-    /* services */
-    div.services {
-        grid-row: 7;
-    }
-    /* votre audio */
-    div.v_audio {
-        grid-row: 8;
-    }
-    /* votre centre audio */
-    div.v_centre {
-        grid-row: 9;
-    }
-    /* spécialité centre */
-    div.speciality {
-        grid-row: 10;
-    }
-    /* prestation */
-    div.prestation {
-        grid-row: 11;
-    }
-    /* diplome */
-    div.congrat {
-        grid-row: 12;
-    }
-    /* mode de paiement */
-    div.mode {
-        grid-row: 13;
-    }
-    /* FAQ */
-    div.faq {
-        grid-row: 14;
-    }
-    /* Avis et commentaires */
-    div.avis_comment {
-        grid-row: 15;
-    }
-    /* Actu */
-    div.actu {
-        grid-row: 16;
-    }
-    
-}
-@media screen and (max-width : 425px) {
-    main{
-        padding: 10px;
-        top: 20px;
-    }
-    header.body div {
-        margin-left: 33%;
-    }
-    header.body span {
-        color: #04BE96;
-        font-size: 1rem;
+    section.actu .carousel__container {
+        transition: transform 0.3s;
+        transform: translate3d(0, 0, 0);
     }
 
-    .fs40 {
-        font-size: 1.2rem;
-    }
-    .box {
-        max-width: 425px;
-        margin: 0.4rem 0;
+    section.actu .carousel__container::after {
+        content: '';
+        clear: both;
+        display: table;
     }
 
-    #img_fond1,
-    #img_fond2 {
-        display: none;
+    section.actu .carousel__item {
+        float: left;
     }
 
-    header #logo {
-        width: 6rem;
-        top: 40px;
-        left: 10px;
+    section.actu .carousel__next, 
+    section.actu .carousel__prev {
+        position: absolute;
+        width: 50px;
+        height: 40px;
+        border-radius: 9px;
+        top: 50%;
+        margin-top: -20px;
+        right: -22px;
+        color: #2ABADA;
+        cursor: pointer;
+        transition: transform 0.3s;
     }
-    header.body {
-        padding: 0;
+    section.actu .carousel__next:hover, 
+    section.actu .carousel__prev:hover {
+        transform: scale(1.2);
     }
-    header.body div .savoir_plus {
-        margin-right: 1.25rem;
+    section.actu .carousel__prev {
+        right: auto;
+        left: -22px;
     }
-    .container {
-        margin: 0;
-        padding: 0;
-        gap: 0.8rem
+
+    section.actu .card {
+        display: grid;
     }
-    div#r_sociaux {
-        margin-left: -50px;
+
+    section.actu .card img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
     }
-    .footer {
-        height: 7rem;
+
+    section.actu .card h4 {
+        color: #2FC39E;
+        text-align: center;
+        margin-top: 1.25rem;
     }
-    .maps img {
-        width: 350px;
+    section.actu .card h3 {
+        text-align: center;
     }
-    div.info_centre .acces .flex #access i {
-        margin-right: 5px;
+    section.actu .calend {
+        text-align: center;
     }
-    div.logo_info {
-        padding-right: 0;
+    section.actu i.calend {
+        color: #000000;
     }
-    div.select_dr .cards {
-        display: flex;
-        flex-direction: column;
-        gap: 0;
+
+
+/********** test auditif ***********/
+    .test_audit {
+        display: grid;
+        background-color: #fff;
+        border: none;
     }
-    div.select_dr article {
-        padding-right: 10px;
+    .test_audit .test {
+        justify-content: center;
+        align-items: center;
+        text-align: end;
+        gap: 1.2rem;
     }
-    div.select_dr div.cards > div.f_row {
-        flex-direction: column;
-    }
-    div.select_dr div.cards .card {
-        margin-bottom: 10px;
-        height: 8rem;
-    }
-    div.select_dr div.cards div.f_row .card-link .card > .f_column {
-        padding-top: 10px;
-        width: 150px;
-    }
-    div.galerie_media div.img_top,
-    div.galerie_media div.img_bottom  {
-        margin-left: 0;
-    }
-    footer {
-        background-position-x: -90px;
-    }
-    div.faq img {
-        width: 3rem;
-    }
-    .test_audit .test img#test {
-        width: 10rem;
-        height: 10rem;
+    .test_audit .test img.test {
+        width:50%;
     }
     .test_audit .test button {
-        width: 300px;
-        font-size: 1.5rem;
+        border-radius: 10px;
+        padding: 0.1em 0.2em 0.15em;
+        border: none;
+        text-wrap: nowrap;
+        font-size: 2rem;
+        width: 18.5rem;
     }
-    div.faq img {
-        top: 3px;
-        right: 3px;
+    .test_audit .test button.audit_test {
+        background-color: #3489CA;
     }
-}
-@media screen and (max-width: 320px) {
-    html {
-        text-align: center;
-        font-size: 1rem;
+    .test_audit .test button.give_rdv {
+        background-color: #04BE96;
     }
-    .box {
-        max-width: 320px;
-        padding: 0.4rem;
+    .test_audit .test p {
+        height: 50px;
     }
-    .pl20{
-        padding-left: 0;
+
+/*********** footer ***********/
+    footer {
+        width: 100% ;
+        background-image: url('/img/Composant\ 1\ –\ 2.png');
+        background-repeat: no-repeat;
+        height: 14.375rem;
+        background-color: #04be96;
     }
-    .f-row {
-        flex-direction: column;
-    }
-    div.centre .centre_info {
-        display: contents;
-    }
-    div.centre .logo_info #logo_centre{
-        width: 100%;
-    }
-    div.centre_info_text {
-        margin-left: 0;
-        grid-column: 1;
-        grid-row: 3 / 3;
-    }
-    div.centre #r_sociaux {
-        margin: 10px auto;
-    }
-    div.info_centre div.open div.day, 
-    div.info_centre div.other_info div#other {
-        padding-left: 0px;
-    }
-    .open,
-    .acces,
-    .other_info {
-        text-align: start;
-        padding-left: 10px;
-        gap: 0.5rem;
-    }
-    .hour {
-        font-size: 0.8rem;
-        padding-top: 3px;
-    }
-    div.info_centre div.open div.day {
-        width: 25%;
-    }
-    .access {
-        margin-right: 5px;
-        padding-left: 0;
-    }
-}

@@ -56,8 +56,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 const selectedDate = new Date(dateParts[2], dateParts[1] - 1, dateParts[0]);
         
                 carousel.selectDate(event.target);
-        
-                console.log('Selected date:', selectedDate);
             }
         });
         timeSelected.addEventListener('click', (event) => {
@@ -65,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 selectTime(event.target);
             }
         });
-    }      
+    }     
     
     class Carousel {
         constructor(container, availableDates, numvisible, startindex) {
@@ -145,24 +143,55 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         populateTimeOptions(selectedDate) {
-            console.log('Selected Date:', selectedDate);
             const timeContainer = document.getElementById('time');
             timeContainer.innerHTML = '';
         
             const availableTimes = this.getAvailableTimes(selectedDate);
 
-            availableTimes.forEach(time => {
-                const timeButton = document.createElement('button');
-                timeButton.textContent = time;
-                timeButton.dataset.date = selectedDate.toISOString();
-                timeButton.dataset.time = time;
-                timeButton.addEventListener('click', () => this.selectTime(timeButton));
-                timeContainer.appendChild(timeButton);
-            });
+            if(availableTimes.length > 3 && availableTimes.length <= 12){
+                availableTimes.slice(0,3).forEach(time => {
+                    const timeButton = document.createElement('button');
+                    timeButton.textContent = time;
+                    timeButton.dataset.date = selectedDate.toISOString();
+                    timeButton.dataset.time = time;
+                    timeButton.addEventListener('click', () => this.selectTime(timeButton));
+                    timeContainer.appendChild(timeButton);
+                }); 
+                availableTimes.slice(3, availableTimes.length).forEach(time => {
+                    const addTimeButton = document.createElement('button');
+                    addTimeButton.textContent = time;
+                    addTimeButton.dataset.date = selectedDate.toISOString();
+                    addTimeButton.dataset.time = time;
+                    addTimeButton.classList = 'hide timeHidden';
+                    // addTimeButton.classList = 'timeHidden';
+                    addTimeButton.addEventListener('click', () => this.selectTime(addTimeButton));
+                    timeContainer.appendChild(addTimeButton);
+                })
+                const buttonAdd = document.createElement('button')
+
+                buttonAdd.textContent = 'voir plus'
+                buttonAdd.classList = "see_more"
+                buttonAdd.setAttribute('id','voir_plus_time')
+                console.log(buttonAdd)
+
+                timeContainer.appendChild(buttonAdd)
+
+                buttonAdd.addEventListener('click', () => {
+                    this.toggleDisplay('timeHidden', 'voir_plus_time');
+                });
+            } else {
+                availableTimes.forEach(time => {
+                    const timeButton = document.createElement('button');
+                    timeButton.textContent = time;
+                    timeButton.dataset.date = selectedDate.toISOString();
+                    timeButton.dataset.time = time;
+                    timeButton.addEventListener('click', () => this.selectTime(timeButton));
+                    timeContainer.appendChild(timeButton);
+                });
+            }
         }
     
         getAvailableTimes(selectedDate) {
-            console.log('Selected Date:', selectedDate);
             const openingHours = [
                 { startHour: 9, endHour: 13, endMinute: 30 },
                 { startHour: 14, endHour: 18, startMinute: 30 } 
@@ -189,13 +218,35 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         
             return availableTimes;
-        }                 
+        }          
+        /**
+         * Affiche ou masque les boutons cachés
+         * @param {string} hiddenClass - La classe des éléments à afficher/masquer
+         * @param {string} buttonId - L'ID du bouton de commande
+         */
+        toggleDisplay(hiddenClass, buttonId) {
+            const elements = document.querySelectorAll(`.${hiddenClass}`);
+            const button = document.getElementById(buttonId);
+
+            if (button) {
+                if (button.textContent === 'voir moins') {
+                    elements.forEach(element => {
+                        element.classList.add('hide');
+                    });
+                    button.textContent = 'voir plus';
+                } else {
+                    elements.forEach(element => {
+                        element.classList.remove('hide');
+                    });
+                    button.textContent = 'voir moins';
+                }
+            }   
+        }
     }
 
     document.getElementById('submit-appointment').addEventListener('click', function() {
         const consultationTypeSelect = document.getElementById('consultation-type');
         const selectedConsultationType = consultationTypeSelect.value;
-        console.log('Consultation Type:', selectedConsultationType);
     });
 
     createCalendar();
@@ -210,10 +261,9 @@ document.addEventListener('DOMContentLoaded', function() {
             const drName = this.getAttribute('data-name');
             selectedDoctor = drName;
 
-            console.log('Nom du docteur sélectionné :', drName);
-
         });
     });
+
     const submitButton = document.getElementById('submit-appointment');
         submitButton.addEventListener('click', function() {
             const consultationType = document.getElementById('consultation-type').value;
@@ -226,3 +276,5 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
 });
+
+
