@@ -230,9 +230,7 @@ body{
         }
         
         div.calendar .day:hover,
-        div.calendar .selected-day,
-        div.calendar .selected-time,
-        div.calendar .selected-time:hover {
+        div.calendar .selected-day {
             background-color: #CCFFF4;
         }
         
@@ -252,6 +250,12 @@ body{
             justify-content: center;
             border: none;
             color: #ffffff;
+        }
+        div.calendar #time button:hover {
+            background-color: #0056b3;
+        }
+        div.calendar #time > button.selected-time {
+            background-color: #0056b3;
         }
         div.calendar #time button.hide {
             display: none;
@@ -303,11 +307,15 @@ body{
     /*******/
     /****** maps ******/
         .maps {
-            justify-content: center;
-            align-items: center;
+            border-color: #77dfc2;
+            border-width: 1px;
+            border-style: solid;
+            border-radius: 26px;
+            filter: drop-shadow(6px 5px 3px rgba(107,255,176,0.16 ));
         }
         .maps img {
             width: 550px;
+            border-radius: 26px;
         }
         div.info_centre div.open {
             margin-bottom: 0.625rem;
