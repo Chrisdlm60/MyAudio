@@ -583,6 +583,8 @@ body{
         display: grid;
         background-color: #fff;
         border: none;
+        padding: 0;
+        margin-bottom: 0;
     }
     .test_audit .test {
         justify-content: center;
@@ -591,7 +593,7 @@ body{
         gap: 1.2rem;
     }
     .test_audit .test img.test {
-        width:50%;
+        width:40%;
     }
     .test_audit .test button {
         border-radius: 10px;
